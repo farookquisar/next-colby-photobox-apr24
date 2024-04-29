@@ -17,7 +17,7 @@ export default function RootLayout({
           <SidebarLinks
             links={[
               {
-                icon: <Image className="w-5 h-5" />,
+                icon: <Image className="w-5 h-5" />, 
                 label: 'Photos',
                 path: '/'
               },
