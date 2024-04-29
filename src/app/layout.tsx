@@ -3,6 +3,8 @@ import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import { getCldOgImageUrl } from 'next-cloudinary';
 import { Analytics } from '@vercel/analytics/react';
+import { ClerkProvider, SignInButton, SignedIn, SignedOut, UserButton } from '@clerk/nextjs'
+
 
 import Providers from '@/app/providers';
 
@@ -35,8 +37,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
+      <ClerkProvider>
         <Providers>{ children }</Providers>
-        <Analytics />
+          <Analytics />
+      </ClerkProvider>
       </body>
     </html>
   )
