@@ -35,13 +35,15 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
+    <ClerkProvider>
     <html lang="en">
       <body className={inter.className}>
-      <ClerkProvider>
+     
         <Providers>{ children }</Providers>
           <Analytics />
-      </ClerkProvider>
+      
       </body>
     </html>
+    </ClerkProvider>
   )
 }
